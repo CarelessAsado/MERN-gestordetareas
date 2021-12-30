@@ -1,0 +1,191 @@
+body {
+  background: linear-gradient(90deg, #e66465, #aa91e5);
+  padding: 30px;
+}
+.App {
+  padding: 0 20px;
+}
+.container {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: aliceblue;
+  min-height: 50vh;
+  padding: 20px 10px;
+  box-shadow: 5px 5px 12px;
+  border-radius: 10px;
+  margin-top: 100px;
+}
+header h1 {
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+.errorContainer {
+  background-color: rgb(236, 179, 179);
+  color: #aa4b4b;
+  margin: 10px 0;
+  padding-left: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.errorContainer .fa-times {
+  color: #aa4b4b;
+  background-color: #f19595;
+}
+.errorContainer .fa-times:hover {
+  background-color: #e96565;
+}
+.errorContainer.success {
+  background-color: rgb(179, 236, 212);
+  color: #44977e;
+}
+.errorContainer.success .fa-times {
+  background-color: rgb(139, 209, 180);
+  color: #357c67;
+}
+.errorContainer.success .fa-times:hover {
+  background-color: rgb(108, 192, 157);
+}
+form {
+  display: flex;
+  gap: 5px;
+}
+@media screen and (max-width: 470px) {
+  form {
+    flex-direction: column;
+  }
+}
+.blockSubmitInput {
+  border: 3px solid #6042a8;
+  flex: 1;
+  display: flex;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomright: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow: hidden;
+}
+.blockSubmitInput input {
+  width: 100%;
+  flex: 1;
+}
+form button,
+input {
+  border: none;
+  padding: 8px;
+  font-size: 1.2rem;
+}
+
+form input.nuevaTarea:focus {
+  outline: none;
+}
+
+form button {
+  font-size: 1.5rem;
+  padding: 8px 15px;
+  background: #aa91e5;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+form button:hover {
+  background: #6042a8;
+  color: aliceblue;
+}
+.containerTareaItems {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.tareaItem {
+  display: flex;
+}
+.tareaItem.funcionalidadTareaItem {
+  display: flex;
+}
+i {
+  padding: 15px;
+  cursor: pointer;
+  color: white;
+  transition: all 0.5s;
+}
+i:hover {
+  color: rgba(66, 52, 52, 0.781);
+}
+.fa-check {
+  background-color: rgb(62, 187, 45);
+}
+.fa-save {
+  background-color: seagreen;
+}
+.fa-trash {
+  background-color: rgb(247, 50, 44);
+}
+.fa-pen {
+  background-color: sandybrown;
+}
+.tareaItem input {
+  flex: 1;
+  outline: none;
+  width: 100%;
+}
+.tareaItem input {
+  transition: all 0.3s;
+}
+.tareaItem input.completada {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+/* .tareaItem input:read-only {
+  outline: none;
+} */
+.tareaItem input.edit {
+  text-decoration: none;
+  color: crimson;
+  border: 2px solid crimson;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 10px 50px 10px 10px;
+  color: #442b7e;
+  width: 100%;
+}
+.select {
+  position: relative;
+  display: flex;
+  border: 1px solid #6042a8;
+}
+
+.select::after {
+  content: "\25bc";
+  position: absolute;
+
+  background-color: #6042a8;
+  color: white;
+  right: 0;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  top: 0;
+  pointer-events: none;
+  transition: all 0.5s;
+}
+.select:hover::after {
+  background-color: #4d338b;
+}
